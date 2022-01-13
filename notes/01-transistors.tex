@@ -20,7 +20,7 @@ When the gate is in its "on" state, the switch is closed, and current passes bet
     \caption{Switch circuit model}
 \end{figure}
 
-\section{PMOS and NMOS Transistors}
+\section{PMOS and NMOS transistors}
 
 In the most simplified form, transistors are switches whose gate is controlled by a threshold gate voltage, measured as the voltage at the gate ($V_G$) relative to the voltage at the source ($V_S$). We denote this voltage as $V_{GS}=V_G-V_S$ and its negation $V_{SG}=-V_{GS}=V_S-V_G$.
 
@@ -36,7 +36,7 @@ In this class, we will cover the CMOS family of transistors, which consist of tw
     \caption{CMOS transistors circuit model}
 \end{figure}
 
-\subsection{Transistor Physics}
+\subsection{Transistor physics}
 
 However, transistors are not actually that simple. While an exact model of involves an extensive knowledge in physics and is out of scope for this class, a "charge puddle" model of the transistor can provide us with more detail on how they work.
 
@@ -48,7 +48,7 @@ However, transistors are not actually that simple. While an exact model of invol
 
 The gate and the silicon connecting the source and drain act similar to two ends of a capacitor. An increase in voltage on the gate causes a "puddle" of charge carriers to form on the silicon, which increases until it is large enough to connect the source and drain, allowing current to pass between them. The gate voltage that corresponds to that connection is the threshold voltage. 
 
-\subsection{Resistor-switch Model}
+\subsection{Resistor-switch model}
 
 With the charge puddle model in mind, we can construct a better circuit model of the transistor. Since the puddle is not a perfect conductor, there is some resistance between the source and drain of a transistor when they are connected. Additionally, we noted earlier that the gate and silicon acted similar to a capacitor, so we add a capacitor between the gate and the source. 
 
@@ -91,7 +91,7 @@ As the name implies, the voltage of this system oscillates between high and low,
 
 We won't prove this here, but you need more than one inverter, otherwise it could converge to some intermediate value. For best results, an odd prime number of inverters should be used due to properties with modular arithemtic. 
 
-\subsection{Detailed Model}
+\subsection{Detailed model}
 The reason why an oscillator actually oscillates is because the inverters do not immediately invert their voltages, creating a chain of sequential inversions that happen on a delay. 
 
 Let's revisit the resistor-switch model of the transistor to take a closer look at why this is the case. 
@@ -122,6 +122,6 @@ We can see that the inverters form an RC circuit, charging up the capacitors to 
 
 Since this charging and discharging is a gradual process, $V_{in_2}$ does not immediately switch between $V_{DD}$ and $0$, and thus it takes some duration of time after one inverter flips before the next one does.
 
-In the next section, we will explore the behavior of RC circuits like this further using differential equations. 
+In the next note, we will explore the behavior of RC circuits like this further using differential equations. 
 
 \end{document}
